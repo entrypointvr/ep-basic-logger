@@ -5,7 +5,7 @@ It relies on `winston` as the logging library and by default only prints to stan
 and standard error.
 
 ## Installation
-1. `npm install --save https://github.com/entrypointvr/ep-basic-logger`
+1. Add `git+ssh://github.com/entrypointvr/ep-basic-logger.git#VERISON` to your package.json
 1. `const logger = require('ep-basic-logger')`
 
 ## Usage
