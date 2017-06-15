@@ -9,7 +9,7 @@ const alias = {
   requestId: 'rid'
 }
 
-module.exports = new (winston.Logger)({
+const logger = new (winston.Logger)({
   transports: [
     new (winston.transports.Console)({
       level: 'debug',
@@ -33,3 +33,9 @@ module.exports = new (winston.Logger)({
     })
   ]
 })
+
+logger.logRequestStart = function(userAgent, parameters, meta) {
+  this.info(`Request started for user: ${userAgent}, with parameters: ${JSON.stringify(parameters)}`, meta)
+}
+
+module.exports = logger

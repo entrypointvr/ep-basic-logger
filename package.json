@@ -1,6 +1,6 @@
 {
   "name": "ep-basic-logger",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "license": "UNLICENSED",
   "description": "Basic logger used by entrypoint for lambdas and other services",

@@ -54,3 +54,9 @@ test('print log statement with overlapping alias', () => {
 `)
 });
 
+test('use default start statment', () => {
+  let requestId = "1234"
+  logger.logRequestStart("Mozilla", {test: 'test'}, { requestId })
+  expect(process.stdout.write).toBeCalledWith(`[INFO][2017-06-15T19:03:22.284Z][rid: ${requestId}] Request started for user: Mozilla, with parameters: {\"test\":\"test\"}
+`)
+})
