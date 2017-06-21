@@ -4,7 +4,7 @@
   "private": true,
   "license": "UNLICENSED",
   "description": "Basic logger used by entrypoint for lambdas and other services",
-  "repository": "https://github.com/entrypointvr/ep-basic-logger.git",
+  "repository": "git+ssh://github.com/entrypointvr/ep-basic-logger.git#0.0.2",
   "dependencies": {
     "winston": "^2.3.1"
   },
