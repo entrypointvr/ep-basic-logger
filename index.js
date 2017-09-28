@@ -38,7 +38,7 @@ const logger = new (winston.Logger)({
 const MAX_PARAMETER_LENGTH = 100
 
 logger.logRequestStart = function(userAgent, parameters, meta) {
-  let shortenedParameters = JSON.stringify(parameters, (key, value) => value.length > MAX_PARAMETER_LENGTH ? `${value.substr(0, MAX_PARAMETER_LENGTH)}...` : value )
+  let shortenedParameters = parameters ? JSON.stringify(parameters, (key, value) => value.length > MAX_PARAMETER_LENGTH ? `${value.substr(0, MAX_PARAMETER_LENGTH)}...` : value ) : 'none'
   this.info(`Request started for user: ${userAgent}, with parameters: ${shortenedParameters}`, meta)
 }
 
