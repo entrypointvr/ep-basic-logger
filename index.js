@@ -7,7 +7,8 @@ const alias = {
   sourceIp: 'ip',
   awsRequestId: 'rid',
   requestId: 'rid',
-  auth: 'tk'
+  auth: 'tk',
+  path: 'p'
 }
 
 const logger = new (winston.Logger)({
